@@ -55,7 +55,7 @@
 
     <profiles>
         <profile>
-            <id>ocp</id>
+            <id>openshift</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
