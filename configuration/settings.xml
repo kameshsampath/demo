@@ -22,7 +22,7 @@
     <proxies>
         <proxy>
             <id>http</id>
-            <active>false</active>
+            <active>true</active>
             <protocol>*</protocol>
             <username/>
             <password/>
