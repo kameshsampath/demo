@@ -87,17 +87,7 @@
                     </snapshots>
                 </repository>
                 <repository>
-                    <id>codehaus-snapshots-repository</id>
-                    <url>https://nexus.codehaus.org/snapshots/</url>
-                    <releases>
-                        <enabled>true</enabled>
-                    </releases>
-                    <snapshots>
-                        <enabled>true</enabled>
-                    </snapshots>
-                </repository>
-                <repository>
-                    <id>snoatype-staging-repository</id>
+                    <id>sonatype-staging-repository</id>
                     <url>https://oss.sonatype.org/content/repositories/staging/</url>
                     <releases>
                         <enabled>true</enabled>
@@ -107,7 +97,7 @@
                     </snapshots>
                 </repository>
                 <repository>
-                    <id>snoatype-snapshots-repository</id>
+                    <id>sonatype-snapshots-repository</id>
                     <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
                     <releases>
                         <enabled>true</enabled>
@@ -233,6 +223,26 @@
                 <pluginRepository>
                     <id>jboss-earlyaccess-plugin-repository</id>
                     <url>http://maven.repository.redhat.com/earlyaccess/all/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </pluginRepository>
+                <pluginRepository>
+                    <id>spring.io.milestone</id>
+                    <url>http://repo.spring.io/milestone/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </pluginRepository>
+                <pluginRepository>
+                    <id>spring.io.release</id>
+                    <url>http://repo.spring.io/release/</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
