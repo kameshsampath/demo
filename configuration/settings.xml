@@ -19,32 +19,22 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
 
-    <!-- proxies
-       This is a list of proxies which can be used on this machine to connect to the network.
-       Unless otherwise specified (by system property or command-line switch), the first proxy
-       specification in this list marked as active will be used.If you are accessing network
-       via a proxy server, Un-comment the proxy options and fill in your proxy server detail.
-     -->
     <proxies>
-        <!-- proxy
-          Specification for one proxy, to be used in connecting to the network. -->
         <proxy>
-            <id>squid-http</id>
-            <active>true</active>
-            <protocol>http</protocol>
+            <id>http</id>
+            <active>false</active>
+            <protocol>*</protocol>
             <username/>
             <password/>
-            <host>192.168.100.3</host>
-            <port>3128</port>
-            <nonProxyHosts/>
+            <host>192.168.1.3</host>
+            <port>8080</port>
+            <nonProxyHosts>localhost</nonProxyHosts>
         </proxy>
     </proxies>
 
     <profiles>
-
-        <!-- Configure the JBoss GA Maven repository -->
         <profile>
-            <id>jboss-ga-repository</id>
+            <id>all-common-repos</id>
             <repositories>
                 <repository>
                     <id>jboss-ga-repository</id>
@@ -56,7 +46,179 @@
                         <enabled>false</enabled>
                     </snapshots>
                 </repository>
+                <repository>
+                    <id>maven2-repository</id>
+                    <url>https://repo1.maven.org/maven2/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>jboss-earlyaccess-repository</id>
+                    <url>http://maven.repository.redhat.com/earlyaccess/all/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>maven2-snapshots-repository</id>
+                    <url>https://repository.apache.org/snapshots/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>codehaus-snapshots-repository</id>
+                    <url>https://nexus.codehaus.org/snapshots/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>codehaus-snapshots-repository</id>
+                    <url>https://nexus.codehaus.org/snapshots/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>snoatype-staging-repository</id>
+                    <url>https://oss.sonatype.org/content/repositories/staging/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>snoatype-snapshots-repository</id>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>jboss-release</id>
+                    <url>https://repository.jboss.org/nexus/content/groups/public/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>fuse-release</id>
+                    <url>https://repository.jboss.org/nexus/content/repositories/fs-releases/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>fs-public</id>
+                    <url>https://repository.jboss.org/nexus/content/groups/fs-public/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>jenkins-ci</id>
+                    <url>http://repo.jenkins-ci.org/public/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>jcenter</id>
+                    <url>http://jcenter.bintray.com/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>jboss.http</id>
+                    <url>http://repository.jboss.org/nexus/content/groups/public/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>spring.io.milestone</id>
+                    <url>http://repo.spring.io/milestone/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>spring.io.release</id>
+                    <url>http://repo.spring.io/release/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>service.mix</id>
+                    <url>http://svn.apache.org/repos/asf/servicemix/m2-repo/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>eclipselink.repo</id>
+                    <url>http://download.eclipse.org/rt/eclipselink/maven.repo/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
             </repositories>
+
+            <!-- Plugin Repositories -->
             <pluginRepositories>
                 <pluginRepository>
                     <id>jboss-ga-plugin-repository</id>
@@ -68,24 +230,6 @@
                         <enabled>false</enabled>
                     </snapshots>
                 </pluginRepository>
-            </pluginRepositories>
-        </profile>
-        <!-- Configure the JBoss Early Access Maven repository -->
-        <profile>
-            <id>jboss-earlyaccess-repository</id>
-            <repositories>
-                <repository>
-                    <id>jboss-earlyaccess-repository</id>
-                    <url>http://maven.repository.redhat.com/earlyaccess/all/</url>
-                    <releases>
-                        <enabled>true</enabled>
-                    </releases>
-                    <snapshots>
-                        <enabled>false</enabled>
-                    </snapshots>
-                </repository>
-            </repositories>
-            <pluginRepositories>
                 <pluginRepository>
                     <id>jboss-earlyaccess-plugin-repository</id>
                     <url>http://maven.repository.redhat.com/earlyaccess/all/</url>
@@ -102,9 +246,7 @@
     </profiles>
 
     <activeProfiles>
-        <!-- Optionally, make the repositories active by default -->
-        <activeProfile>jboss-ga-repository</activeProfile>
-        <activeProfile>jboss-earlyaccess-repository</activeProfile>
+        <activeProfile>all-common-repos</activeProfile>
     </activeProfiles>
 
 </settings>
